@@ -8,9 +8,9 @@ const observable: Observable<number> = new Observable(obs => {
 observable.subscribe(x => console.log("1: observable: ", x));
 observable.subscribe(x => console.log("2: observable: ", x));
 
-const sub: Subject<number> = new Subject();
+const subject: Subject<number> = new Subject();
 
-sub.subscribe(x => console.log("1: subject: ", x));
-sub.subscribe(x => console.log("2: subject: ", x));
+subject.subscribe(x => console.log("1: subject: ", x));
+subject.subscribe(x => console.log("2: subject: ", x));
 
-sub.next(Math.random()); // will return same number for all subscriptions
+subject.next(Math.random()); // will return same number for all subscriptions
